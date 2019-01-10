@@ -227,7 +227,7 @@ nav ul li a {
 
 .LOGO{
 	position: fixed;
-	z-index: 2;
+	z-index: 20;
 	height: 60px;
 	padding: 10px 0 10px 10px;
 }
