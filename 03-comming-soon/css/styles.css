@@ -24,7 +24,7 @@
 1. PRIMARY STYLES
 --------------------------------- */
 
-html{ font-size: 100%; height: 100%; width: 100%; overflow-x: hidden; margin: 0px;  padding: 0px; touch-action: manipulation; }
+/*html{ font-size: 100%; height: 100%; width: 100%; overflow-x: hidden; margin: 0px;  padding: 0px; touch-action: manipulation; }*/
 
 
 body{ font-size: 16px; font-family: 'Open Sans', sans-serif; width: 100%; height: 100%; margin: 0; font-weight: 400;
@@ -56,7 +56,7 @@ b{ font-weight: 500; }
 
 img{ width: 100%; }
 
-li{ list-style: none; display: inline-block; }
+.social-btn li{ list-style: none; display: inline-block; }
 
 span{ display: inline-block; }
 
@@ -77,6 +77,10 @@ b.light-color{ color: #444; }
     -webkit-box-sizing: inherit;
 	box-sizing: inherit;} 
 
+
+.header{
+	height: 100px;
+}
 	
 /* ---------------------------------
 2. COMMONS FOR PAGE DESIGN
@@ -110,7 +114,7 @@ b.light-color{ color: #444; }
 3. MAIN SECTION
 --------------------------------- */
 
-.main-area{ position: relative; height: 100vh; z-index: 1; padding: 0 20px; background-size: cover; color: #fff; }
+.main-area{height: 100vh;padding: 0 20px; background-size: cover; color: #fff; }
 
 .main-area:after{ content:''; position: absolute; top: 0; bottom: 0;left: 0; right: 0; z-index: -1;  
 	opacity: .4; background: #000; }
@@ -131,4 +135,104 @@ b.light-color{ color: #444; }
 
 	
 .main-area .social-btn > li > a:hover:after{ transform: translateX(100%); }
+
+/* ---------------------------------
+4. Navgation
+--------------------------------- */
+.container nav.desk,.container nav.mob{
+  position: fixed;
+ 
+  width: 100%;
+  background: #364a4b;
+  height: 60px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+}
+
+nav.desk ul {
+  list-style: none;
+  width: 70%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+nav.desk ul li {
+  width: 20%;
+  float: left;
+  text-align: center;
+  line-height: 60px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+
+nav.desk ul li:hover,nav.mob ul li:hover{
+  background: #a3ada5;
+}
+
+
+nav.desk ul li.active,nav.mob ul li.active{
+  background: #a3ada5;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mob,.hamburger-btn {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  nav.desk {
+    display: none;
+  }
+
+  nav.mob,  .hamburger-btn {
+    display: block;
+  }
+  
+  .hamburger-btn {
+    position: relative;
+  }
+
+  .hamburger-btn .fa-bars,
+  .hamburger-btn .fa-times {
+    position: fixed;
+    right: 25px;
+    top: 15px;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .mob ul{
+    margin-top: 60px;
+    background: #364a4b;
+    display: none;
+  }
+
+  .mob li {
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .mob ul.active {
+    display: block;
+  }
+}
+
+.LOGO{
+	position: fixed;
+	z-index: 1;
+	height: 60px;
+	padding: 10px 0 10px 10px;
+}
+.LOGO img{
+	width:150px;
+	height: 40px;
+	}
 
